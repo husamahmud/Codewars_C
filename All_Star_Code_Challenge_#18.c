@@ -2,15 +2,15 @@
 
 size_t str_count(const char *str, char letter)
 {
-	int i, count;
-
-	while (str[i] != '\0')
+	int count = 0;
+	while (*str != '\0')
 	{
-		if (str[i] == letter)
+		if (*str == letter)
 			count++;
-
-		i++;
+		str++;
 	}
+	if (count)
+		return (count);
 
-	return count;
+	return (0);
 }
